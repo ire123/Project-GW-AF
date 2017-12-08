@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp -->
+<head>
+  <meta charset="UTF-8">
+  <title>GW Story</title>
+  
+  <!--reset stylesheet -->
+  <link type="text/css" rel="stylesheet" href="../css/reset.css">
+
+  <!-- bootstrapcdn stylesheet -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  
+  <!-- landing page stylesheet  -->
+  <link type="text/css" rel="stylesheet" href="../css/gw_story_style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header" >
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="lat-link" href="/">Global Warming</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Climate Controversy<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.skepticalscience.com/global-warming-scientific-consensus.htm" target="_blank">Climate Change Consensus</a></li>
+              <li><a href="https://www.skepticalscience.com/argument.php" target="_blank">Global Warming & Climate Change Myths</a></li>
+              <li><a href="https://link.springer.com/article/10.1007/s00704-015-1597-5" target="_blank">A Study of Climate Change Denial Studies</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GW Charts<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="gw_story.html">Climate Change ~ Global Warming</a></li>
+              <li><a href="explore_process.html">Exploring Data</a></li>
+              <li><a href="global_temps.html">Global Temperatures</a></li>
+              <li><a href="temps_by_country.html">Temperatures by Country</a></li>
+              <li><a href="co2_temps.html">CO2</a></li>
+            </ul>
+          </li>
+          <li><a href="http://smartplayer.captionsync.com/play.php?vid=1509669950apetrash_741a3839075d" target="_blank">Climate Change 101 with Bill Nye</a></li>
+          <li><a href="about_gw.html" target="_blank">About</a></li>
+        </ul>
+      </div>
+      <!-- navbar-collapse -->
+    </div>
+    <!-- container-fluid -->
+  </nav>
+
+  <!-- Our rows function in containers (grid created). -->
+  <div class="container-fluid">
+    <!-- Our columns function in rows. -->
+    <div class="row">
+      <!-- Columns have 12 areas of width to work with. -->
+      <!-- (7/12) of screen -->
+      <div class="col-sm-7" id="col-7">
+        <h1>Climate Change ~ Global Warming</h1>
+        <hr>        
+        <section>
+          <figure>
+            <img class="img-responsive" id="sumry-img" src="../images/world_outline.jpg" width="400" height="400" alt="World Map">
+            <p>
+            Climate change.  Global warming.  You often hear those phrases together, but climate change is a broad category that includes a variety of criteria and global warming is referring to the earth's temperature (getting hotter).  Some people say climate change is real, and global warming or the earth's temperature warming is man-made and the cause of extreme weather events.  Others contend that higher temperatures are a natural process, extreme weather events are normal, and while mankind's activities does put greenhouse gases in the air they aren't the cause of the earth's higher temperatures.  This disagreement won't be settled by this project, but we hope to shed some light on the subject.
+            <br>
+            <br> 
+            The idea for this project started with Climate Change and its association with wild fires.  That idea evolved into Climate Change and Global Warming.  There is a lot the goes into picking an idea for a project and a lot more goes into making the idea a reality.  For this project we used Google search to find potential websites with available data sets, and then we checked other sites that  were original source for our data sets.  Those included Data.World, Kaggle.com, BerkeleyEarth.org, and CDIAC (Carbon Dioxide Information Analysis Center).  The temperature data we used was from Data.World which originated from Kaggle.com, and the raw temperature data was from BerkeleyEarth.org.  The CO2 data was from CDIAC and the authors were Tom Boden and Bob Andres (Oak Ridge National Laboratory); Gregg Marland (Appalachian State University).  Finding the data was only the beginning.    
+            <br>
+            <br>
+            Data inspection was next, and we used excel and the import data from text or csv files, and once the was loaded, we used excel sort and filter to examine, count, view the data for completeness and general appropriateness for the project.  After excel, we had some idea of the quality of our data, and we were ready to proceed to cleaning and doing more examination of the data using Pandas, Numpy, Matplotlib, and other Python libraries.
+            <br>
+            <br>
+            More background process details.
+            <br>
+            <br>
+            More background process details.
+            <br>
+            <br>
+            More background process details.  
+          </p>
+          </figure>
+        </section>
+      <!-- div - col 7 end -->  
+      </div>
+      
+      <!-- Visualizations -->
+      <div class="col-sm-4" id="viz-all">
+        <h2 align="center">Global Warming</h2>
+        <hr>
+        <!-- nested row 12 columns " -->
+        <div class="row">       
+          <div class="col-sm-6">
+            <section>
+              <figure>
+              	<h3 align='center'>Global Temps</h3>
+                <a href="global_temps.html">
+                <img class="img-responsive" src="../images/global_1850-2015_yearly_tempf.png" alt="Global Yearly Average Temperatures (F)"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+          <div class="col-sm-6">
+            <section>
+              <figure>
+              	<h3 align='center'>CO2 ~ Temps</h3>
+                <a href="co2_temps.html">
+                <img class="img-responsive" src="../images/co2_metric_tons_by_country.png" alt="CO2 and Temperature"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+        <!-- nested row 12 columns -->
+        </div>    
+        
+        <!-- nested row 12 columns -->
+        <div class="row">
+          <div class="col-sm-6">
+            <section>
+              <figure>
+              	<h3 align='center'>Exploring Data</h3>
+                <a href="explore_process.html">
+                <img class="img-responsive" src="../images/usa_co2_scatter.png" alt="USA CO2 Scatter Plot "></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+
+          <div class="col-sm-6">     
+            <section>
+              <figure>
+              	<h3 align='center'>Temps by Country</h3>
+                <a href="temps_by_country.html">
+                <img class="img-responsive" src="../images/yearly_avg_tempf_by_country.png" alt="Yearly Average Temperatures (F) by Country"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+        <!-- nested row 12 columns -->
+        </div>  
+      <!-- div - col 4 end -->  
+      </div>
+    <!-- div - row end -->
+    </div>
+  <!-- div container end -->
+  </div>
+
+  <!-- jquery file  -->
+  <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+    <!-- bootstrap javascript file -->
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+
+</body>
+
+</html>	

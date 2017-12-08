@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Temperatures by Country</title>
+  
+  <!-- bootstrapcdn stylesheet -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  
+  <!--reset stylesheet -->
+  <link type="text/css" rel="stylesheet" href="../css/reset.css">
+
+  <!-- landing page stylesheet  -->
+  <link type="text/css" rel="stylesheet" href="../css/temps_by_country_style.css">
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="lat-link" href="/">Global Warming</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Climate Controversy<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.skepticalscience.com/global-warming-scientific-consensus.htm" target="_blank">Climate Change Consensus</a></li>
+              <li><a href="https://www.skepticalscience.com/argument.php" target="_blank">Global Warming & Climate Change Myths</a></li>
+              <li><a href="https://link.springer.com/article/10.1007/s00704-015-1597-5" target="_blank">Study of Climate Change Denial Studies</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GW Charts<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="gw_story.html">Climate Change ~ Global Warming</a></li>
+              <li><a href="explore_process.html">Exploring Data</a></li>
+              <li><a href="global_temps.html">Global Temperatures</a></li>
+              <li><a href="temps_by_country.html">Temperatures by Country</a></li>
+              <li><a href="co2_temps.html">CO2</a></li>
+            </ul>
+          </li>
+          <li><a href="http://smartplayer.captionsync.com/play.php?vid=1509669950apetrash_741a3839075d" target="_blank">Climate Change 101 with Bill Nye</a></li>
+          <li><a href="about_gw.html" target="_blank">About</a></li>
+        </ul>
+      </div>
+    <!-- navbar-collapse -->
+    </div>
+    <!-- container-fluid -->
+  </nav>
+
+  <!-- Our rows function in containers (grid created). -->
+  <div class="container-fluid">
+    <!-- 1st row of columns -->
+    <div class="row">
+      <!-- Columns have 12 areas of width to work with. -->
+      <!-- (7/12)  of screen -->
+      <div class="col-sm-7" id="col-7">
+        <h1>Yearly Average Temperature(F)</h1>
+        <hr>
+        <section id="temp_main">
+          <figure>
+            <img class="img-responsive" src="../images/yearly_avg_tempf_by_country.png" width="800" height="800" alt="Yearly Avg Temps (F) by Country">
+          </figure>
+        </section>
+
+        <p id="temp_p"> 
+          Add analysis here.  
+        </p>
+      <!-- div col 7 end -->  
+      </div>
+    
+      <!-- Visualizations -->
+      <div class="col-sm-4" id="viz-all">
+        <h2 align="center">Temperatures by Country</h2>
+        <hr>
+        <!-- nested row 12 columns " -->
+        <div class="row">       
+          <div class="col-sm-6">
+            <section>
+              <figure>
+                <h3 align='center'>Spain 1850-2012</h3>
+                <a href="compare_temperatures.html">
+                <img class="img-responsive" src="../images/1850-2012_spain_temp_chart.png" alt="Spain Yearly Average Temp (F)"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+          <div class="col-sm-6">
+            <section>
+              <figure>
+                <h3 align='center'>Canada 1850-2012</h3>
+                <a href="compare_temperatures.html">
+                <img class="img-responsive" src="../images/1850-2012_canada_temp_chart.png" alt="Canada Yearly Average Temp (F)"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+        <!-- nested row 12 columns -->
+        </div>    
+        
+        <!-- nested row 12 columns -->
+        <div class="row">
+          <div class="col-sm-6">
+            <section>
+              <figure>
+                <h3 align='center'>Poland 1850-2012</h3>
+                <a href="compare_temperatures.html">
+                <img class="img-responsive" src="../images/1850-2012_poland_temp_chart.png" alt="Poland Yearly Average Temp (F)"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+
+          <div class="col-sm-6">     
+            <section>
+              <figure>
+                <h3 align='center'>France 1850-2012</h3>
+                <a href="compare_temperatures.html">
+                <img class="img-responsive" src="../images/1850-2012_france_temp_chart.png" alt="France Yearly Average Temp (F)"></a>
+              </figure>
+            </section>
+          <!-- nested 6 columns -->  
+          </div>
+        <!-- nested row 12 columns -->
+        </div>  
+      <!-- div - col 4 end -->  
+      </div>
+    <!-- div - row end -->
+    </div>
+  <!-- div container end -->
+  </div>
+
+  <!-- jquery file  -->
+  <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+  <!-- bootstrap javascript file -->
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+  
+</body>
+
+</html>	

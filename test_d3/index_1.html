@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp -->
+<head>
+  <meta charset="UTF-8">
+  <title>D3 Plots</title>
+  
+  <!--reset stylesheet -->
+  <link type="text/css" rel="stylesheet" href="./css/reset.css">
+
+  <!-- bootstrapcdn stylesheet -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  
+  <!-- landing page stylesheet  -->
+  <link type="text/css" rel="stylesheet" href="./css/main_page.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header" >
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="landing-link" href="#">Global Warming</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Background<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.skepticalscience.com/global-warming-scientific-consensus.htm" target="_blank">Climate Change Consensus</a></li>
+              <li><a href="https://www.skepticalscience.com/argument.php" target="_blank">Global Warming & Climate Change Myths</a></li>
+              <li><a href="https://link.springer.com/article/10.1007/s00704-015-1597-5" target="_blank">Study of Climate Change Denial Studies</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Charts<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./bio_page/my_bio_page.html">My Bio</a></li>
+              <li><a href="https://www.scottish-country-dancing-dictionary.com/" target="_blank">Scottish Country Dancing</a></li>
+              <li><a href="https://www.candystore.com/" target="_blank">Way too much candy!</a></li>
+            </ul>
+          </li>
+          <li><a href="http://smartplayer.captionsync.com/play.php?vid=1509669950apetrash_741a3839075d" target="_blank">Climate Change 101 with Bill Nye</a></li>
+          <li><a href="./html/about_gw.html" target="_blank">About</a></li>
+        </ul>
+      </div>
+      <!-- navbar-collapse -->
+    </div>
+    <!-- container-fluid -->
+  </nav>
+
+  <!-- Our rows function in containers (grid created). -->
+  <div class="container-fluid">
+    <!-- Our columns function in rows. -->
+    <div class="row">
+      <!-- Columns have 12 areas of width to work with. -->
+      <!-- (12/12) of screen -->
+      <div class="col-md-12" id="col-12">
+        <iframe width="980" height="550" src="./html/d3_C.html" frameborder="0" ></iframe>
+        <h2>Project Global Warming</h2>
+        <hr>
+        <p id="p1">
+          Climate change.  Global warming.  You hear those phrases together often, but climate change includes a variety of criteria and global warming is referring to the earth's temperature (getting hotter).  Some people say climate change is real, and global warming or the earth's temperature warming is man-made and the cause of extreme weather events.  Others contend that higher temperatures are a natural process, extreme weather events are normal, and while mankind's activities does put greenhouse gases in the air they aren't the cause of the earth's higher temperatures.  This disagreement won't be settled by this project, but we hope to shed some light on the subject.
+        </p>
+      <!-- div - col 12 end -->  
+      </div>
+    <!-- div - row end -->
+    </div>
+  <!-- div container end -->
+  </div>
+
+  <!-- jquery file  -->
+  <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
+    <!-- bootstrap javascript file -->
+  <script type="text/javascript" src="./js/bootstrap.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  
+</body>
+
+</html>	

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exploratory Process</title>
+  
+  <!--reset stylesheet -->
+  <link type="text/css" rel="stylesheet" href="../css/reset.css">
+
+  <!-- bootstrapcdn stylesheet -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  
+  <!-- landing page stylesheet  -->
+  <link type="text/css" rel="stylesheet" href="../css/compare_exploratory_plots_style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="lat-link" href="/">Global Warming</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Climate Controversy<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.skepticalscience.com/global-warming-scientific-consensus.htm" target="_blank">Climate Change Consensus</a></li>
+              <li><a href="https://www.skepticalscience.com/argument.php" target="_blank">Global Warming & Climate Change Myths</a></li>
+              <li><a href="https://link.springer.com/article/10.1007/s00704-015-1597-5" target="_blank">A Study of Climate Change Denial Studies</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GW Charts<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="gw_story.html">Climate Change ~ Global Warming</a></li>
+              <li><a href="explore_process.html">Exploring Data</a></li>
+              <li><a href="global_temps.html">Global Temperatures</a></li>
+              <li><a href="temps_by_country.html">Temperatures by Country</a></li>
+              <li><a href="co2_temps.html">CO2</a></li>
+            </ul>
+          </li>
+          <li><a href="http://smartplayer.captionsync.com/play.php?vid=1509669950apetrash_741a3839075d" target="_blank">Climate Change 101 with Bill Nye</a></li>
+          <li><a href="about_gw.html" target="_blank">About</a></li>
+        </ul>
+      </div>
+      <!-- navbar-collapse -->
+    </div>
+    <!-- container-fluid -->
+  </nav>
+  
+  <!-- Our rows function in containers (grid created). -->
+  <div class="container-fluid">
+    <!-- Our columns function in rows. -->
+    <div class="rows">
+      <div class="col-md-12">
+        <h1>Compare Explortory Plots</h1>
+        <hr>
+      </div>
+    </div>
+
+    <div class="rows">
+      <!-- Columns have 12 areas of width to work with. -->
+      <!-- One half of screen (6/12) -->
+      <div class="col-md-6">
+        <section id="img-1">
+          <h2 align="center">USA Temp Lag Plot</h2>
+          <figure>
+            <!--<a href="temperature_page.html">-->
+            <img class="img-responsive" src="../images/usa_lag-plot_temp.png" width="500" height="300" alt="USA Temp Lag Plot"></a>
+          </figure>
+        </section>
+      </div>
+        <!-- One half of screen (6/12) -->
+      <div class="col-md-6">
+        <section id="img-2">
+          <h2 align="center">France Temp Lag Plot</h2>
+          <figure>
+            <!--<a href="cloudiness_page.html">-->
+            <img class="img-responsive" src="../images/france_lag-plot_temp.png" width="500" height="300" alt="France Temp Lag Plot"></a>
+          </figure>
+        </section>
+      </div>
+    </div>
+
+    <div class="rows">
+      <div class="col-md-6">
+        <section id="img-3">
+          <h2 align="center">USA CO2 Histogram</h2>
+          <figure>
+            <!--<a href="humidity_page.html">-->
+            <img class="img-responsive" src="../images/usa_histogram_co2.png" width="500" height="300" alt="USA CO2 Histogram"></a>
+          </figure>
+        </section>
+       <!-- div - row 1 col-md-6 end --> 
+      </div>
+      <div class="col-md-6">
+        <section id="img-4">
+          <h2 align="center">France CO2 Histogram</h2>
+          <figure>
+            <!--<a href="wind_mph_page.html">-->
+            <img class="img-responsive" src="../images/france_histogram_co2.png" width="500" height="300" alt="France CO2 Histogram"></a>
+          </figure>
+        </section>
+      <!-- div - row 2 col-md-6 end -->  
+      </div>
+
+    <div class="rows">
+      <div class="col-md-6">
+        <section id="img-3">
+          <h2 align="center">USA Correlation</h2>
+          <figure>
+            <!--<a href="humidity_page.html">-->
+            <img class="img-responsive" src="../images/usa_co2_temp_correlation.png" width="500" height="300" alt="USA Correlation"></a>
+          </figure>
+        </section>
+       <!-- div - row 1 col-md-6 end --> 
+      </div>
+      <div class="col-md-6">
+        <section id="img-4">
+          <h2 align="center">France Correlation</h2>
+          <figure>
+            <!--<a href="wind_mph_page.html">-->
+            <img class="img-responsive" src="../images/france_co2_temp_correlation.png" width="500" height="300" alt="France Correlation"></a>
+          </figure>
+        </section>
+      <!-- div - row 2 col-md-6 end -->  
+      </div>      
+    <!-- div - row end -->
+    </div>
+  <!-- div container end -->
+  </div>
+
+  <!-- jquery file  -->
+  <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+  <!-- bootstrap javascript file -->
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+
+</body>
+
+</html>	
