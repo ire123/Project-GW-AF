@@ -4,7 +4,7 @@ app = Flask(__name__)
  
 @app.route('/')
 def index():
-    return render_template('./weather/%s.html' % ('landing_page'))
+    return render_template('./d3/%s.html' % ('index'))
  
 if __name__ == '__main__':
     app.run()
