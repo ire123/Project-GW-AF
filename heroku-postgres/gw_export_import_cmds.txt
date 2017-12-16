@@ -1,0 +1,128 @@
+
+
+Use one of these dump commands from a terminal emulator or create a dump file from pgAdmin:
+Examples of pg_dump commands from terminal emulator:
+1) PGPASSWORD='mypassword' pg_dump -Fc --no-acl --no-owner -U postgres gw_db > gw_db_12102017.dump
+2) pg_dump -Fc --no-owner -U postgres gw_db > gw_db_12102017.dump
+3) pg_dump -Fc gw_db > gw_db_12102017.dump
+
+
+Create an Amazon web service account and use their S3 storage service to store the dump file for loading into heroku postgres database.
+
+
+Heroku Support said to use the pg_backup:restore process:
+After loggin into heroku from Windows cmd prompt, run the following command from a terminal.
+
+
+$ heroku pg:backups:restore 'https://s3-us-west-1.amazonaws.com/chrisg-aws-bucket2/gw_db_12102017_Terminal.dump' DATABASE_URL
+ !    WARNING: Destructive Action
+ !    This command will affect the app project-gw
+ !    To proceed, type project-gw or re-run this command with --confirm
+ !    project-gw
+
+> project-gw
+Starting restore of https://s3-us-west-1.amazonaws.com/chrisg-aws-bucket2/gw_db_12102017_Terminal.dump to postgresql-animated-62565... done
+
+Use Ctrl-C at any time to stop monitoring progress; the backup will continue restoring.
+Use heroku pg:backups to check progress.
+Stop a running restore with heroku pg:backups:cancel.
+
+Restoring... done
+
+
+
+Delete some of the rows so we're below the hobby-dev level restrictions.
+
+$ heroku pg:psql
+--> Connecting to postgresql-animated-62565
+\dt
+                      List of relations
+ Schema |           Name            | Type  |     Owner
+--------+---------------------------+-------+----------------
+ public | city_country_mthly_temps  | table | zveqkcpjroxbce
+ public | country_mthly_temps       | table | zveqkcpjroxbce
+ public | country_yearly_co2        | table | zveqkcpjroxbce
+ public | country_yearly_temps      | table | zveqkcpjroxbce
+ public | global_mthly_temps        | table | zveqkcpjroxbce
+ public | state_country_mthly_temps | table | zveqkcpjroxbce
+(6 rows)
+
+select count(*) from global_mthly_temps;
+ count
+-------
+  1992
+(1 row)
+
+\q
+
+$
+
+
+
+Once the GW temperature and CO2 tables were  loaded from the dump file, there were too many rows for the hobby-dev level.  I deleted most of the rows.
+
+$ heroku pg:psql
+--> Connecting to postgresql-animated-62565
+
+delete from city_country_mthly_temps
+where m_date < '2012-01-01';
+DELETE 226155
+delete from country_mthly_temps
+where m_date < '2012-01-01';
+DELETE 536755
+select count(*) from country_yearly_temps where year < 2012;
+ count
+-------
+ 45117
+(1 row)
+
+delete from country_yearly_temps
+where year < 2012;
+DELETE 45117
+delete from state_country_mthly_temps where m_date < '2012-01-01';
+DELETE 615067
+delete from country_yearly_co2 where year < 2012;
+DELETE 16572
+select count(*) from country_yearly_co2;
+ count
+-------
+   660
+(1 row)
+
+select count(*) from state_country_mthly_temps;
+ count
+-------
+  2892
+(1 row)
+
+select count(*) from country_yearly_temps;
+ count
+-------
+   241
+
+(1 row)
+select count(*) from country_mthly_temps;
+ count
+-------
+  2892
+(1 row)
+
+select count(*) from city_country_mthly_temps;
+ count
+-------
+  1200
+(1 row)
+
+select count(*) from global_mthly_temps;
+ count
+-------
+  1992
+(1 row)
+
+commit;
+WARNING:  there is no transaction in progress
+COMMIT
+
+\q
+
+$
